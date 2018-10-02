@@ -1,0 +1,81 @@
+循环
+
+我们有时候需要反复执行一段代码，这种时候通常就会用到循环。
+你应该了解的循环有一下几种
+
+I. for循环(for loop)
+
+   for(int i = 0; i < 10; i++){
+      //do some stuff
+   }
+   
+      我们来仔细研究一下( )里的内容
+   for loop 的括号里需要三句话。
+   1. int i = initialVal;     声明一个i，这个i可以跟踪loop跑了多少圈。
+                                                                注意这个i只在loop内有效，出了loop它就没了。
+                              initialVal是i的初始值，即它第一圈的时候是多少。
+  
+   2. i < endVal;             循环条件。这一句应该是一个boolean值。
+                                                                每次进入循环的时候，loop都会判断这个值是否为true。
+                                                                只有当它是true的时候，循环才会继续。
+                                                                
+   3. i++;                    更新i的值。这句在每次循环的最后执行。
+   
+     以该loop为例，一个 for loop 这样工作：
+     1）进来以后首先建一个叫i的int, 并且赋值0；
+     2）判断i是否 < 10
+     3）如果否，直接结束循环。
+           如果是，执行{ }内的代码。
+     4）执行i++; 回到2）继续循环
+     
+     实例：见loops.java
+     
+     
+II. while循环（while loop）
+    
+    while(boolean bl){
+        //do stuff
+    }
+    
+    while循环与for相比，只需要任意boolean作为其循环条件，每次进入循环，while都会
+        判断这个boolean的值是否为true. 如果true则继续循环，如果否则跳出循环。
+        
+    for和while可以互相转换，但一般如果你需要循环跑固定的圈数，建议用for，反之则用while。
+        
+        实例：见loops.java
+        
+    
+        扩展：知乎问题：一行代码能有多强大？
+                    答案：能轻松跑死你，比如：
+          while(true){System.out.println(666);}
+                     一个无限666的死循环。
+                    这还只是最简单的死循环，哼哼。。。
+  
+以下内容了解为主：
+
+III. for each 循环
+
+     for(element e : something){
+         //do stuff
+     }
+     
+           以此访问something中所有类型为element的对象。
+     something可能是array这种能存一堆对象的类型。
+   
+          优点：快速访问所有你要的对象，不用考虑循环什么时候终止，不用判断循环条件。
+          缺点：只能访问不能修改。也就是只能看每个e是多少，不能以任何形式进行赋值。
+          
+          这个在array那一课会重新提到。
+          
+
+IV. break 和 continue
+
+    break;          跳出当前整个循环
+    continue;       跳过本次循环剩余的内容直接进入下一次循环
+    
+        见扩展部分
+   
+   
+   
+   
+   
