@@ -1,0 +1,92 @@
+类
+
+有了关于运算和函数的概念后你可以更好的了解类了。
+
+我们又看到hero和quirk类啦！这次这两个类里的东西多了一些。
+
+I. 我们先来看quirk类，比起之前，它多了一个函数。
+      我们来观察一下它。
+   
+   public quirk(String name, String des) {
+		this.qName = name;
+		this.qDesc = des;
+	}
+	
+	首先，它没有返还类型。
+	其次，它的名字和类的名字一样。
+	它有两个参数，分别赋值给quirk类里的两个String。
+	
+	这就是一个构造函数Constructor
+	它用来构造一个quirk对象。
+	
+	我们去heroAcademia类里看看它的用法。
+	
+	我们还发现了一个新词汇this和小数点.的用法。
+	
+	this    ：      当前对象。这个在java里这种情况下其实可以不写，但是有些语言必须要写（比如javascript)
+	                          而且有时候不写会出bug。
+	                          所以你访问成员变量的时候还是有用没用都写上。              
+	
+	oneForAll.qName     ：       访问oneForAll的qName。
+	
+	现在你可以去完成hero类里的构造函数！
+	
+
+II. 我们看到hero类里，除了构造器以外，还有别的函数。
+        先来看这个
+        
+    public int getAge() {
+		return this.age;
+	}
+	
+	这是一个读访问器accessor，我一般就叫访问器。
+	为什么我们需要它呢？因为我们看到，现在hero类里的age和quirk都是private
+	private意味着别的类不能直接访问它们，
+	也就是说如果在heroAcademia里写hero.age是会出错的。跟public的hero.name不同。
+	这个时候就需要accessor。
+	
+	accessor一般这样写：
+	          1. 首先public。如果一个函数是private,那么它将只能在这个类内部被调用，但
+	                        既然我们用它来访问private的变量，那么它自己需要能被其他类直接使用。
+	          2. 返还类型当然要与你返还的那个变量类型相同。
+	          3. 命名，一般用getName这种结构。
+	          4. 参数，一般没有。
+	          5. 内容，一般直接返还this.变量名。
+	          
+	自己试试！
+
+III.
+       我们再看这个：
+       
+    public void setAge(int a) {
+		this.age = a;
+	}
+	   
+	这是一个写访问器mutator，我一般叫修改器。
+	mutator用来看一个private变量是什么，setter用来修改它。
+	
+	mutator一般这样写：
+	
+	          1. public
+	          2.  返还类型一般是void
+	          3. 命名，setName
+	          4. 参数。一般有一个你的目标值。即你想把它赋值为多少。
+	          5. 内容，给该变量赋值。
+	          
+	自己试试！
+	          
+	accessor和mutator的意思大概就是：
+	     
+	        比如 我们有个对象叫Midoriya
+	                我们想用他的年龄。
+	                int hisAge = Midoriya.age;
+	                但是由于age是private上面的代码行不通，所以instead:
+	                int hisAge = Midoriya.getAge();
+	                就可以了。
+	        mutator同理。  
+	        
+	        
+	
+	
+	
+	

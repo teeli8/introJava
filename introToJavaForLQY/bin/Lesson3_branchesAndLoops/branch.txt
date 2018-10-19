@@ -1,0 +1,48 @@
+条件判断
+
+
+I. 你或许大概知道 if else 是如何工作的 现在让我们来规范的了解   if else 语句。
+
+   if(boolean){
+      //statement;
+   }
+   
+      小括号内的内容必须返还一个boolean值，可能返还boolean值的有
+      1. 一个boolean变量，如 声明： boolean bl = true; if(bl){...}
+      2. 一个判断运算，比如 x > y
+      3. 一个返还boolean值的函数，这个在学了函数之后自然会make sense
+      4. 直接true 或 false ， 比如if(true){...}，当然这没什么意义。。。
+      
+   if(boolean){
+      //statement1;
+   }
+   else{
+      //statement2;
+   }
+      如果boolean判断为true，那么进入statement1，否则进入statement2。
+   
+   if(boolean1){
+      //statement1;
+   }
+   else if(boolean2){
+      //statement2;
+   }
+   else if(boolean3){
+      //statement3;
+   }
+   else{
+      //statement4;
+   }
+      也可以像这样进行连续的判断。
+   
+   
+   打开branch.java, 自己试试！
+   
+
+扩展：以下内容了解为主：
+      switch case 语句。
+            相当于一连串的if else，当判断条件很多的时候比if else更直观且快捷。
+            见branch.java
+   
+   
+   
