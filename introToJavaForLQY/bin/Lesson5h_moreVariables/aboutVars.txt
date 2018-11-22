@@ -1,0 +1,58 @@
+关于变量
+
+本章内容不一定要现在了解，但是再写更复杂的东西前还是知道一下比较好。
+
+I. 全局Global与局部Local
+   
+      全局：声明在函数外的变量即为全局变量。他们可以被该类任何函数访问。
+      局部：声明在函数内的变量，只能在函数内访问。
+
+II. Casting
+   
+      有时候，我们可以直接转换一个变量的类型。
+      比如：
+      double d = 2.5; 
+      int i = (int)d;
+   
+      如果像这样直接把double变成int，结果i是d的整数部分。
+      你可以试试哪些类型可以互相cast
+
+III. char 与 Ascii
+
+         在计算机里，我们看到的char是ABCD,计算机看到的是一堆二进制数
+         这就说明每个char都有对应的不同的数，也就是ASCII
+         具体每个char对应的是什么数你可以自己查一查表
+         你需要知道的是：
+     
+     1. 0123456789是连号的 ， abcd... 是练号的，ABCD... 是连号的。
+     
+     2. 小写字母比大写字母小
+     
+     3. 字母比数字大
+     
+     4. 数字1的ascii不是1
+         
+         见vars.java
+
+
+IV. String类
+
+    java里的String可以直接使用许多可爱的自带方法
+    
+    .length()   返还一个字符串的长度。
+    
+    .equals(String str)  比较前后两个字符串是不是一样的。
+    
+    .compareTo(String str)  比较前后字符串的“大小”，返还一个int。
+                                                        比较的方法是按字符依次比较，前面减后面
+                                                        更具体的你可以自己试一试
+                                                        
+   注：你应该永远用equals()和compareTo()来比较String,而不是==。
+   
+     .indexOf(char ch)   获取一个char在String里第一次出现的位置。
+     
+     .substring(int beginIndex, int endIndex)   获取一段子字符串。
+     
+     还有很多，可以自行探索。
+
+

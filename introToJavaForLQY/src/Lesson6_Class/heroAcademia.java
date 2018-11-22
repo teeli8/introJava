@@ -1,13 +1,13 @@
 package Lesson6_Class;
 
-public class heroAcademia {
+public class HeroAcademia {
 	
 	
 	public static void main(String[] args) {
 		
-		//创建一个quirk对象
-		//这个quirk的名字是One For All, 描述是后面那一串。
-		quirk oneForAll = new quirk("One For All","Boosts the owner's speed and strength");
+		//创建一个Quirk对象
+		//这个Quirk的名字是One For All, 描述是后面那一串。
+		Quirk oneForAll = new Quirk("One For All","Boosts the owner's speed and strength");
 	    //用对象名.成员变量可以访问public变量
 		System.out.println(oneForAll.qName);
 		

@@ -1,0 +1,97 @@
+父类与子类
+
+I.extends
+
+   有些时候，我们会遇到这种情况：
+   
+           我想定义一个类叫动物animal，
+           我又想定义一个类叫人。
+           但是我发现人也是一种动物。
+           我们能不能让人这个类直接获得动物的一些特性呢？
+           
+           这个时候，就会用到子类与父类。相当于数学中的子集。
+           
+   在声明类的时候，我们可以用extends关键字声明父子关系。
+   见rectangle.java和square.java
+   因为正方形属于长方形。
+   所以我说：square extends rectangle ，就是square是rectangle的儿子（子类）
+   
+II.构造：
+   
+      如果我现在声明并定义一个square，比如：
+      
+      square s = new square();
+      
+      我们其实会先构造一个rectangle，然后再构造square。
+      也就是说，即使我们像这样直接新建一个square，rectangle的构造函数依然会被调用。
+      
+III.继承(inheritance)：
+
+     子类对象可以直接用父类里的函数。
+     比如：在square里没有perimeter这个函数，但是s.perimeter()依然可以执行。
+     这就是子类继承了父类的函数。
+     注意：子类可以继承父类的所有函数，但是如果是子类特有的函数，比如expand()，父类就访问不到。
+     
+
+IV.重写(override) 与  重载(overload)：
+  
+  1.重写
+        
+        那如果，我在子类里重新写了一遍父类的方法，比如area()，而且写的不一样，会发生什么呢？
+        这个取决于对象的类型。如果对象是一个square，那么它将执行square里的area()，如果是rectangle，
+        那他会执行rectangle里的，因为它访问不到子类里的方法。
+        这就叫重写，子类里的方法重写了父类里的方法。
+        那么现在问题来了：如果我这样写：
+        
+        rectangle r = new square();
+        r.area();
+    
+        注意这样写是可以的！因为square是一个rectangle，所以可以直接把rectangle对象定义为一个square
+        注意：反过来不行！
+            
+        但是这样调用的是哪个area()呢？！
+        自己测试一下！
+        
+  2.重载
+  
+        首先，重载与子类与父类没什么关系，放在一起讲只是为了区分，避免混淆。
+        什么是重载？
+        
+        我们思考一个问题：
+    
+        System.out.println("1");   //参数是一个字符串，这样是可以的
+        System.out.println(1);     //参数是一个数，也是可以的。
+                甚至，其实参数是各种原始类型都可以。
+        
+        问题来了：java在声明println的时候，到底是void println(String x)还是void println(int x)
+        
+        好问题对吧，因为如果你自己写一个myPrint(String x)，然后你放一个int进去，它是会 报错的。
+
+        答案是：两个都有！我全都要！
+        
+        这就是重载了。也就是说：
+        
+        public void func(){};
+        和
+        public void func(int x){};
+        
+        是不一样且可以同时存在的。
+        虽然它们名字一样，但是参数不一样，所以编译器还是可以区分它们。
+        甚至：
+        
+        public void func(int x, String s){};
+        和
+        public void func(String s, int x){};
+        
+        也是不一样且可以区分的。
+        这就是重载。
+        在rectangle里，我声明并定义了了两个构造函数，一个有参数，一个没参数，这也是一种重载。
+        
+IV.多态(polymorphism):
+
+       如果在同一个类中，你定义两个名字一样，参数一样的函数的话，是会报错的，因为你调用的时候编译器没法区分你想用哪个。
+       但是如果在不一样的类中，就不一定了。
+
+
+
+

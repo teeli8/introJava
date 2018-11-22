@@ -1,6 +1,6 @@
 package Lesson5h_moreVariables;
 
-public class vars {
+public class Vars {
 
 	
 	  public static int glob = 1;  //global

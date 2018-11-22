@@ -1,6 +1,6 @@
 package practice_mathP;
 
-public class algorithms {
+public class Algorithms {
 	
 	//返还root的p次方
 	public int power(int root, int p) {

@@ -1,25 +1,28 @@
 类
 
+
+注：一般来说类的名字习惯是大写开头。如果我写了小写，那是我疏忽了。。
+
 有了关于运算和函数的概念后你可以更好的了解类了。
 
-我们又看到hero和quirk类啦！这次这两个类里的东西多了一些。
+我们又看到Hero和Quirk类啦！这次这两个类里的东西多了一些。
 
-I. 我们先来看quirk类，比起之前，它多了一个函数。
+I. 我们先来看Quirk类，比起之前，它多了一个函数。
       我们来观察一下它。
    
-   public quirk(String name, String des) {
+   public Quirk(String name, String des) {
 		this.qName = name;
 		this.qDesc = des;
 	}
 	
 	首先，它没有返还类型。
 	其次，它的名字和类的名字一样。
-	它有两个参数，分别赋值给quirk类里的两个String。
+	它有两个参数，分别赋值给Quirk类里的两个String。
 	
 	这就是一个构造函数Constructor
-	它用来构造一个quirk对象。
+	它用来构造一个Quirk对象。
 	
-	我们去heroAcademia类里看看它的用法。
+	我们去HeroAcademia类里看看它的用法。
 	
 	我们还发现了一个新词汇this和小数点.的用法。
 	
@@ -40,7 +43,7 @@ II. 我们看到hero类里，除了构造器以外，还有别的函数。
 	}
 	
 	这是一个读访问器accessor，我一般就叫访问器。
-	为什么我们需要它呢？因为我们看到，现在hero类里的age和quirk都是private
+	为什么我们需要它呢？因为我们看到，现在hero类里的age和Quirk都是private
 	private意味着别的类不能直接访问它们，
 	也就是说如果在heroAcademia里写hero.age是会出错的。跟public的hero.name不同。
 	这个时候就需要accessor。

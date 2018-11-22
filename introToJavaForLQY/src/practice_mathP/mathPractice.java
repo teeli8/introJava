@@ -1,6 +1,6 @@
 package practice_mathP;
 
-public class mathPractice {
+public class MathPractice {
 	
 	
 	public static void printAns(int correctAns, int yourAns, String algor) {
@@ -15,7 +15,7 @@ public class mathPractice {
 	
 	public static void main(String[] args) {
 		
-		algorithms test = new algorithms();
+		Algorithms test = new Algorithms();
 		
 		int r = 2;
 		int p = 5;

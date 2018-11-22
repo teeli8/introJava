@@ -1,11 +1,11 @@
 package Lesson6_Class;
 
-public class hero {
+public class Hero {
 	
 	//hero类：一个英雄名字，年龄，和个性
 	public String name;
 	private int age;           
-	private quirk quirk;       //英雄不应该轻易暴露年龄和个性，所以我们把它们设成private
+	private Quirk quirk;       //英雄不应该轻易暴露年龄和个性，所以我们把它们设成private
 	
 	//TODO: 完成hero类的构造函数
 	
@@ -33,7 +33,7 @@ public class hero {
 	}
 	
 	
-	//TODO: 完成quirk的修改器
+	//TODO: 完成Quirk的修改器
 	
 	
 	

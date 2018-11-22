@@ -1,6 +1,6 @@
 package Lesson7_exceptions;
 
-public class excAndDebug {
+public class ExcAndDebug {
 	
 	public static final int[] arr = {5,4,3,2,1,0};
 	
@@ -38,7 +38,7 @@ public class excAndDebug {
 		  arr[0] = 1;
 	  }
 	  
-	  public static void changeBox(box b) {
+	  public static void changeBox(Box b) {
 		  b.setInt(1);
 	  }
 	  
@@ -79,7 +79,7 @@ public class excAndDebug {
 		System.out.println("int x after the change is " + x);
 		System.out.println("int[] arr after the change is " + arr[0]);
 		
-//		box b = new box(0);
+//		Box b = new Box(0);
 //		changeBox(b);
 //		System.out.println("box b after the change is " + b.a);
 	}
@@ -87,9 +87,9 @@ public class excAndDebug {
 
 }
 
-class box{		
+class Box{		
 	int a;
-	box(int in){
+	Box(int in){
 		a = in;
 	}
 	void setInt(int set) {
